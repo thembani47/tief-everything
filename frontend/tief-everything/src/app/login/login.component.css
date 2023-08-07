@@ -1,0 +1,17 @@
+.center {
+    line-height: 50vh;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-700px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.slideInLeft {
+    animation: slideInLeft 1s ease-in 0s 1 normal none;
+}
