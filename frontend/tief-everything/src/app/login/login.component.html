@@ -18,7 +18,7 @@
                <p class="slideInLeft pt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quos, ducimus praesentium deserunt nobis sapiente earum nihil consectetur inventore. Alias officia dignissimos nesciunt repellat quos nemo cum error fuga harum!</p>
             </div>
         </div>
-        <div class="col">
+        <div class="col" *ngIf="isLoginMode">
             <div>
                 <div>
                     <h1>Sign In</h1>
@@ -40,9 +40,16 @@
                 </div>
                 <div class="text-center text-lg-start mt-2 pt-2">
                     <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                        class="link-danger">Register</a></p>
+                        class="link-danger" (click)="onSwitchMode()">Register</a></p>
                 </div>
                 
+            </div>
+        </div>
+        <div class="col" *ngIf="!isLoginMode">
+            <div>
+                <div>
+                    <h1>Sign Up</h1>
+                </div>
             </div>
         </div>
     </div>
